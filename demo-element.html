@@ -2,7 +2,7 @@
 <link rel="import" href="../components/google-youtube/google-youtube.html">
 <link rel="import" href="../components/paper-input/paper-input.html">
 
-<link rel="import" href="../components/speech-mic-master/speech-mic.html">
+<!-- link rel="import" href="../components/speech-mic-master/speech-mic.html" -->
 
 <dom-module id="demo-element">
   <template id="page-template">
@@ -36,7 +36,7 @@
     <!-- google-youTube element -->
     <google-youtube id="googleYouTube"
                     autoplay="1"
-                    video-id="{{transcript}}"
+                    video-id="{{videoId}}"
                     width="853px"
                     height="480px"
                     thumbnail="//www.polymer-project.org/images/logos/p-logo.svg">
@@ -44,7 +44,8 @@
     <br><br>
 
     <!-- This is the input which is bind to google-youtube element, the entered video-id will be played automatically-->
-    <paper-input value="{{transcript}}"></paper-input>
+    <!-- video-id="yRbOSdAe_JU" -->
+    <paper-input value="{{videoId}}"></paper-input>
 
     <!-- Speach-Mic, unfortunatly not working -->
     <!--div horizontal center layout>
@@ -58,7 +59,7 @@
      Polymer({
        is: "demo-element",
        properties: {
-         transcript: {
+         videoId: {
            type: String,
          }
        }
@@ -66,5 +67,3 @@
    </script>
 
 </dom-module>
-
-<!-- video-id="yRbOSdAe_JU" -->
