@@ -2,8 +2,6 @@
 <link rel="import" href="../components/google-youtube/google-youtube.html">
 <link rel="import" href="../components/paper-input/paper-input.html">
 
-<!-- link rel="import" href="../components/speech-mic-master/speech-mic.html" -->
-
 <dom-module id="demo-element">
   <template id="page-template">
     <style>
@@ -39,30 +37,49 @@
                     video-id="{{videoId}}"
                     width="853px"
                     height="480px"
-                    thumbnail="//www.polymer-project.org/images/logos/p-logo.svg">
+                    >
     </google-youtube>
+<!--
+    <google-youtube id="googleYouTube"
+                     playsupported="{{playSupported}}"
+                     video-id="mN7IAaRdi_k"
+                     state="{{state}}"
+                     currenttime="{{currentTime}}"
+                     currenttimeformatted="{{currentTimeFormatted}}"
+                     duration="{{duration}}"
+                     durationformatted="{{durationFormatted}}"
+                     fractionloaded="{{fractionLoaded}}"
+                     volume="{{volume}}"
+                     playbackrate="{{playbackRate}}"
+                     playbackquality="{{playbackQuality}}"
+                     on-google-youtube-state-change="handleStateChange"
+                     on-google-youtube-error="handleYouTubeError">
+     </google-youtube> -->
+
     <br><br>
 
     <!-- This is the input which is bind to google-youtube element, the entered video-id will be played automatically-->
     <!-- video-id="yRbOSdAe_JU" -->
     <paper-input value="{{videoId}}"></paper-input>
 
-    <!-- Speach-Mic, unfortunatly not working -->
-    <!--div horizontal center layout>
-        <h4>Is this what u really want! </h4><input value="{{transcript}}">
-        <speech-mic id="speech_mic" transcript="{{transcript}}"></speech-mic>
-    </div -->
-
   </template>
 
+  <!--You always need the script tag to let hem know about which html we are talking, in this case"demo-element".-->
   <script>
      Polymer({
        is: "demo-element",
        properties: {
          videoId: {
            type: String,
+           notify: true
          }
        }
+
+      //the $ is used to address an element in this DOM.
+      //  _onPlayVideoClicked: function(event) {
+      //    console.log('ok');
+      //    this.$.googleYouTube.play();
+      //  }
      });
    </script>
 
