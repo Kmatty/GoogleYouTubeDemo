@@ -1,0 +1,14 @@
+{
+  "name": "You-tube-element",
+  "description": "",
+  "homepage": "",
+  "keywords": [
+  ],
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "google-youtube": "GoogleWebComponents/google-youtube#^1.1.0",
+    "paper-input": "PolymerElements/paper-input#^1.0.0" 
+  }
+}

@@ -1,0 +1,70 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/google-youtube/google-youtube.html">
+<link rel="import" href="../components/paper-input/paper-input.html">
+
+<link rel="import" href="../components/speech-mic-master/speech-mic.html">
+
+<dom-module id="demo-element">
+  <template id="page-template">
+    <style>
+    :host {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      }
+      #speech_mic {
+      left: 70px;
+      top: 280px;
+      position: absolute;
+      }
+      #input {
+        padding: 15px;
+        left: 830px;
+        top: 410px;
+        position: absolute;
+      }
+      #paper_input {
+        left: 1100px;
+        top: 610px;
+        position: absolute;
+      }
+
+    </style>
+    <h1>Google Youtube element demo</h1>
+
+    <!-- google-youTube element -->
+    <google-youtube id="googleYouTube"
+                    autoplay="1"
+                    video-id="{{transcript}}"
+                    width="853px"
+                    height="480px"
+                    thumbnail="//www.polymer-project.org/images/logos/p-logo.svg">
+    </google-youtube>
+    <br><br>
+
+    <!-- This is the input which is bind to google-youtube element, the entered video-id will be played automatically-->
+    <paper-input value="{{transcript}}"></paper-input>
+
+    <!-- Speach-Mic, unfortunatly not working -->
+    <!--div horizontal center layout>
+        <h4>Is this what u really want! </h4><input value="{{transcript}}">
+        <speech-mic id="speech_mic" transcript="{{transcript}}"></speech-mic>
+    </div -->
+
+  </template>
+
+  <script>
+     Polymer({
+       is: "demo-element",
+       properties: {
+         transcript: {
+           type: String,
+         }
+       }
+     });
+   </script>
+
+</dom-module>
+
+<!-- video-id="yRbOSdAe_JU" -->
