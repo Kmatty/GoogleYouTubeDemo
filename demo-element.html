@@ -4,31 +4,7 @@
 
 <dom-module id="demo-element">
   <template id="page-template">
-    <style>
-    :host {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-      }
-      #speech_mic {
-      left: 70px;
-      top: 280px;
-      position: absolute;
-      }
-      #input {
-        padding: 15px;
-        left: 830px;
-        top: 410px;
-        position: absolute;
-      }
-      #paper_input {
-        left: 1100px;
-        top: 610px;
-        position: absolute;
-      }
 
-    </style>
     <h1>Google Youtube element demo</h1>
 
     <!-- google-youTube element -->
@@ -39,22 +15,6 @@
                     height="480px"
                     >
     </google-youtube>
-<!--
-    <google-youtube id="googleYouTube"
-                     playsupported="{{playSupported}}"
-                     video-id="mN7IAaRdi_k"
-                     state="{{state}}"
-                     currenttime="{{currentTime}}"
-                     currenttimeformatted="{{currentTimeFormatted}}"
-                     duration="{{duration}}"
-                     durationformatted="{{durationFormatted}}"
-                     fractionloaded="{{fractionLoaded}}"
-                     volume="{{volume}}"
-                     playbackrate="{{playbackRate}}"
-                     playbackquality="{{playbackQuality}}"
-                     on-google-youtube-state-change="handleStateChange"
-                     on-google-youtube-error="handleYouTubeError">
-     </google-youtube> -->
 
     <br><br>
 
